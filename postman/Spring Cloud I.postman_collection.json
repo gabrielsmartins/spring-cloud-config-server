@@ -9,27 +9,117 @@
 			"name": "Fornecedor",
 			"item": [
 				{
-					"name": "GET",
+					"name": "Fornecedor",
 					"item": [
 						{
-							"name": "Consulta Por Estado",
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "http://localhost:8081/info/SP",
-									"protocol": "http",
-									"host": [
-										"localhost"
-									],
-									"port": "8081",
-									"path": [
-										"info",
-										"SP"
-									]
+							"name": "GET",
+							"item": [
+								{
+									"name": "Consulta Por Estado",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8081/info/SP",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8081",
+											"path": [
+												"info",
+												"SP"
+											]
+										}
+									},
+									"response": []
 								}
-							},
-							"response": []
+							],
+							"protocolProfileBehavior": {},
+							"_postman_isSubFolder": true
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Produto",
+					"item": [
+						{
+							"name": "GET",
+							"item": [
+								{
+									"name": "Consulta Produtos",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:8081/produto/SP",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8081",
+											"path": [
+												"produto",
+												"SP"
+											]
+										}
+									},
+									"response": []
+								}
+							],
+							"protocolProfileBehavior": {},
+							"_postman_isSubFolder": true
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Pedido",
+					"item": [
+						{
+							"name": "POST",
+							"item": [
+								{
+									"name": "Realiza Pedido",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"name": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "[\n    {\n        \"id\": 1,\n        \"quantidade\": 10\n    },\n    {\n        \"id\": 2,\n        \"quantidade\": 5\n    },\n    {\n        \"id\": 3,\n        \"quantidade\": 20\n    }\n]",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:8081/pedido",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "8081",
+											"path": [
+												"pedido"
+											]
+										}
+									},
+									"response": []
+								}
+							],
+							"protocolProfileBehavior": {},
+							"_postman_isSubFolder": true
 						}
 					],
 					"protocolProfileBehavior": {},
@@ -121,14 +211,15 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8888/fornecedor",
+							"raw": "http://localhost:8888/fornecedor/default",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "8888",
 							"path": [
-								"fornecedor"
+								"fornecedor",
+								"default"
 							]
 						}
 					},
